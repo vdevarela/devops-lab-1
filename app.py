@@ -1,4 +1,3 @@
-
 """
 Simple Flask web application for DevOps lab
 This app demonstrates basic web functionality with some code quality issues
