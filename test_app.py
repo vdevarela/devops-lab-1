@@ -3,7 +3,7 @@ Comprehensive tests for the Flask application with coverage analysis
 """
 import unittest
 import json
-from app import app, badFunction
+from app import app, bad_function
  
 class TestFlaskApp(unittest.TestCase):
     """Test cases for Flask application"""
@@ -76,11 +76,11 @@ class TestFlaskApp(unittest.TestCase):
         self.assertEqual(data['result'], 0)
  
     def test_bad_function_directly(self):
-        """Test the badFunction directly for complete coverage"""
-        # Test all branches of badFunction
-        self.assertEqual(badFunction(15, 20), 300)  # x > 10, y > 10
-        self.assertEqual(badFunction(15, 5), 20)    # x > 10, y <= 10
-        self.assertEqual(badFunction(5, 20), 0)     # x <= 10
+        """Test the bad_function directly for complete coverage"""
+        # Test all branches of bad_function
+        self.assertEqual(bad_function(15, 20), 300)  # x > 10, y > 10
+        self.assertEqual(bad_function(15, 5), 20)    # x > 10, y <= 10
+        self.assertEqual(bad_function(5, 20), 0)     # x <= 10
  
 if __name__ == '__main__':
     unittest.main()
