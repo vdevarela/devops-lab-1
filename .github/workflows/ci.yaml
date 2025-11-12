@@ -108,7 +108,7 @@ jobs:
       SONAR_PROJECT_KEY: devops-lab-1
       SONAR_PROJECT_NAME: DevOps Lab Project
       SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-      SONAR_HOST_URL: http://localhost:9000
+      SONAR_HOST_URL: http://localhost:9090
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -122,7 +122,7 @@ jobs:
         uses: SonarSource/sonarqube-scan-action@v6
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_HOST_URL: http://localhost:9000
+          SONAR_HOST_URL: http://localhost:9090
  
       - name: Wait & check SonarQube quality gate
         run: |
